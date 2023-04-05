@@ -1,107 +1,97 @@
-body,h1, h2, p {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-h1, p {
-    margin-right: 10px;
-   
-}
-
-.container {
+/* CSS for Desktop View */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 100%;
+    min-width: 960px;
     margin: 0 auto;
-    max-width: 992px;
-    padding: 0 20px;
+  }
+  .row: {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .col {
+    width: 450px;
+    float: left;
+    margin-right: 3%;
+    box-sizing: border-box;
+  }
+  .col:nth-child(3) {
+    margin-right: 2;
+  }
 }
 
-.pageheading {
-    text-align: center;
+/* CSS for Tablet View */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .col {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+  }
+  .col:nth-child(2n) {
+    margin-right: 0;
+  }
+  .col3 {
+    width: 100%;
     margin-top: 20px;
-    font-size: 175%;
-    padding: 0px 0px 100px 0px;
-
+    margin-right: 0;
+  }
 }
 
-.section {
-    background-color: #808080;
-    border: 1px solid #000;
+/* CSS for Mobile View */
+@media only screen and (max-width: 767px) {
+  .col {
+    width: 100%;
+    margin-right: 0;
     margin-bottom: 20px;
-    box-sizing: border-box;
-
+  }
+  .col:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
-.sectiontitle {
-    position: relative;
-    top: 50;
-    right: 50;
-    background-color: ffcccb;
-    font-size: 125%;
-    border: 1px solid #000;
-    padding: 5px 10px;
-    margin: 0px;
-    box-sizing: border-box;
-    
+/* Shared CSS */
+.container {
+  padding: 20px;
 }
-
-.sectiontext {
-    font-size: 100%;
-    padding: 40px 20px 20px 20px;
+.row {
+  margin-top: 20px;
 }
+.col {
+  position: relative;
+  border: 1px solid #000;
+  background-color: #808080;
+  box-sizing: border-box;
+  font-weight: bold;
 
-.column {
-  float: left;
-  width: 33.33%;
 }
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+h1 {
+  font-size: 175%;
+  text-align: center;
+  margin-bottom: 60px;
 }
-    
-
-
-@media screen and (min-width: 767px) {
-    /* Mobile view */
-    .section {
-        width: 100%;
-        margin: 0;
-    }
-
-    .section-title {
-        font-size: 150%;
-    }
+h2 {
+  font-size: 125%;
+  position: relative;
+  top: 0;
+  right: 0;
+  float: right;
+  background-color: #FFA500;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0;
+  margin-bottom: 10px;
+  border-left-style: solid;
+  border-left-color: black;
+  border-left-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
 }
+p {
+  font-size: 16px;
+  margin: 10px;
+  position: relative;
+  clear: right;
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    /* Tablet view */
-    .section {
-        width: 50%;
-        float: left;
-        clear: both;
-    }
-
-    .section:nth-child(3) {
-        width: 100%;
-        clear: both;
-    }
-
-    .section-title {
-        font-size: 125%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    /* Desktop view */
-    .section {
-        width: 33.33%;
-        float: left;
-        clear: none;
-    }
-
-    .section-title {
-        font-size: 100%;
-    }
 }
